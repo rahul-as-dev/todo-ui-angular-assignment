@@ -1,0 +1,19 @@
+<div class="container" fxLayout="column">
+    <div class="login" fxFlex="20%">Sign-in</div>
+    <form class="form" [formGroup]="reactiveForm" (ngSubmit)="onLogin()" fxFlex="80%" fxLayout="column">
+        
+        <div class="formField" fxFlex="20%">
+            <input type="email" id="email" formControlName="email" placeholder="enter email">
+        </div>
+        <div class="formField" fxFlex="20%">
+            <input type="password" id="password" formControlName="password" placeholder="enter password">
+        </div>
+        <div fxFlex="30%">
+            <button class="button">Login</button>
+        </div>
+        <div class="sign-up" fxFlex="30%">
+            New User ? <a class="reg-link" routerLink="/register">Create Account</a>
+        </div>
+    </form>
+</div>
+

@@ -1,0 +1,14 @@
+<div fxLayout="row" class="nav-bar">
+    <div fxFlex="60%"class="app-name">
+        {{appName}}
+    </div>
+    <div fxFlex="40%" class="nav-link">
+        <a routerLink="/about">About</a>
+        <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+        <a routerLink="/register">Register</a>
+        <a *ngIf="isLoggedIn" routerLink="/about" (click)="logout()">Log-Out</a>
+    </div>
+    <div class="menu-bar">
+        <img src=".././assets/menu.png" class="icon" (click)="onToggle()"/>
+    </div>
+</div>

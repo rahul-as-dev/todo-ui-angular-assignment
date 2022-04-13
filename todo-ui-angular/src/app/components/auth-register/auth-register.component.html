@@ -1,0 +1,25 @@
+<div class="container" fxLayout="column">
+    <div class="register" fxFlex="20%">Register</div>
+    <form class="form" [formGroup]="reactiveForm" (ngSubmit)="onRegister()" fxFlex="80%" fxLayout="column">
+
+        <div class="formField" fxFlex="20%">
+            <input type="text" id="email" formControlName="name" placeholder="enter full name">
+        </div>
+        
+        <div class="formField" fxFlex="20%">
+            <input type="email" id="email" formControlName="email" placeholder="enter email">
+        </div>
+
+        <div class="formField" fxFlex="20%">
+            <input type="password" id="password" formControlName="password" placeholder="enter password">
+        </div>
+
+        <div fxFlex="20%">
+            <button class="button">Register</button>
+        </div>
+
+        <div class="sign-up" fxFlex="20%">
+            Alraedy a User ? <a class="reg-link" routerLink="/login">Login</a>
+        </div>
+    </form>
+</div>
